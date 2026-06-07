@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cavinti Wild Water | Premium Adventure Bookings</title>
-    <script>
-        // 1. Paste your actual deployed Google Apps Script Web App .exec URL here
-        const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbxUOAjT8zC5YX94s9vboN6vo-EUebM9EqaG_s6J-jrPyzHbkN7oVRNM6NjvHSAB8b4vnA/exec";
-
-        async function mirrorApp() {
-            try {
-                const res = await fetch(googleWebAppUrl);
-                const htmlContent = await res.text();
-                
-                // Inject the live web app code into the document frame natively
-                document.open();
-                document.write(htmlContent);
-                document.close();
-            } catch (err) {
-                console.error("Error connecting to script instance:", err);
-                document.body.innerHTML = "<div style='text-align:center; padding-top:50px; font-family:sans-serif;'><p>Unable to connect to the booking backend. Please refresh.</p></div>";
-            }
-        }
-        
-        // Fixed the typo here so it correctly calls the function above
-        window.onload = mirrorApp; 
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cavinti Wild Water | Premium Adventure & Sanctuary Stay</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #082f49; /* Matches your premium deep river dark background */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
 </head>
-<body style="margin:0; padding:0; background-color:#f8fafc;">
-    <div style="display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; color:#475569;">
-        <p style="letter-spacing: 0.05em; font-weight: 500;">Initializing Premium Booking Portal...</p>
-    </div>
+<body>
+
+  <iframe src="https://script.google.com/macros/s/AKfycbzzPRua15E2g1sPdvgAMsoMDwv8GKXzRtkZALZTuK9ENbQk3mKUPONICI0Dflu88acjOw/exec" allow="geolocation; microphone; camera; midi; encrypted-media;"></iframe>
+
 </body>
 </html>
